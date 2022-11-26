@@ -1,0 +1,27 @@
+body {
+	color: gold;
+  	background: url(christmasBackground.jpg) no-repeat center center fixed; 
+  	background-size: cover;
+}
+
+#mainHeading {
+	background: red;
+	color: white;
+	border: 12px dotted #00bcd4;
+	padding: 10px;
+	text-align: center;
+}
+
+#countdown {
+	background: white;
+	color: red;
+	border: 10px dotted orange;
+	text-align: center;
+	font-size: 24px;
+}
+
+@media only screen and (max-width: 600px) {
+	#countdown {
+		font-size: 35px;
+	}
+}
