@@ -1,5 +1,6 @@
 # The Christmas Countdown App
-Christmas countdown with fun elements 
+
+Christmas countdown with fun elements.
 
 ## To Do:
 
@@ -9,3 +10,11 @@ Christmas countdown with fun elements
 4. snow falling
 5. snow respoding to touch (a biggie)
 6. open gift to see something different every day
+7. eliminate loading state
+
+
+### Also To Do:
+
+1. font color
+2. font type
+3.transparent background for fonts

@@ -1,23 +1,38 @@
 body {
 	color: gold;
-  	background: url(christmasBackground.jpg) no-repeat center center fixed; 
-  	background-size: cover;
+  background: url(christmasBackground.jpg) no-repeat center center fixed; 
+  background-size: cover;
+	text-align: center;
 }
 
 #mainHeading {
-	background: red;
+	/* background: transparent; */
 	color: white;
-	border: 12px dotted #00bcd4;
+	/* border: 12px dotted #00bcd4; */
 	padding: 10px;
-	text-align: center;
 }
 
 #countdown {
-	background: white;
-	color: red;
-	border: 10px dotted orange;
-	text-align: center;
+	background: rgb(229 187 80 / 24%);
+	width: 38%;
+	margin: 20px auto;
+	padding: 2px 20px;
 	font-size: 24px;
+	border: 5px double #9e3726;
+}
+
+.oreo-text {
+	font-size: 2rem;
+}
+
+.snowflake {
+	background: white;
+	height: 15px;
+	width: 15px;
+	border-radius: 50%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
 }
 
 @media only screen and (max-width: 600px) {

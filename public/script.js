@@ -77,3 +77,24 @@ if(currentDay <25){
 } else {
 	console.log("It might be the 25...or it might be later");
 }*/
+
+// set up a loop
+
+let y = 0; 
+let x = Math.random() * window.innerWidth;
+const speed = 5;
+
+function gameLoop() {
+	const babyFlake = document.getElementById("babyFlake");
+	
+	y = y+speed;
+	if (y>window.innerHeight){
+		x = Math.random() * window.innerWidth;
+		y = 0;
+	}
+	
+	babyFlake.style.top = y + "px";  // 10 + "px" --> "10px" 
+	babyFlake.style.left = x + "px";
+}
+
+setInterval(gameLoop, 40);
