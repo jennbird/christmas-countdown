@@ -80,13 +80,13 @@ if(currentDay <25){
 
 
 let snowflakes = [];
-
+const numberOfSnowflakes = 125;
 // generate snowflake data
 
-for (let i = 0; i < 150; i++) {
+for (let i = 0; i < numberOfSnowflakes; i++) {
 	const snowflake = {
 		x: Math.random() * window.innerWidth,
-		y: -10 + Math.random() * window.innerHeight,
+		y: (-1 * window.innerHeight) + Math.random() * window.innerHeight,
 		speed: 3 + Math.random() * 2,
 		opacity: 0.2 + Math.random() * 0.8,
 		color: "white",
