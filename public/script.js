@@ -83,10 +83,10 @@ let snowflakes = [];
 
 // generate snowflake data
 
-for (let i = 0; i < 100; i++) {
+for (let i = 0; i < 150; i++) {
 	const snowflake = {
 		x: Math.random() * window.innerWidth,
-		y: 0,
+		y: -10 + Math.random() * window.innerHeight,
 		speed: 3 + Math.random() * 2,
 		opacity: 0.2 + Math.random() * 0.8,
 		color: "white",
