@@ -36,7 +36,7 @@ function daysUntilChristmas(){
 	document.getElementById("days").innerText = roundedDaysUntilChristmas + " days";
 	document.getElementById("hours").innerText = roundedHoursUntilChristmas + " hours";
 	document.getElementById("minutes").innerText = roundedMinutesUntilChristmas + " minutes";
-	document.getElementById("seconds").innerText = roundedSecondsUntilChristmas + " seconds until CHRISTMAS!!!";
+	document.getElementById("seconds").innerText = roundedSecondsUntilChristmas + " seconds";
 	 //does the same thing as the above commented out lines
 
 }
