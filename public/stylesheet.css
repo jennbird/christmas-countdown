@@ -21,6 +21,12 @@ body {
 	border: 5px double #9e3726;
 }
 
+#secret-christmas-wish {
+	font-size: 1.8rem;
+	color: white;
+	text-shadow: -2px 2px 3px #7b8213;
+}
+
 .oreo-text {
 	font-size: 2rem;
 }
@@ -37,6 +43,7 @@ body {
 
 @media only screen and (max-width: 600px) {
 	#countdown {
-		font-size: 35px;
+		font-size: 1.8rem;
+		width: 80%;
 	}
 }

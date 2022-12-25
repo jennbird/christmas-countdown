@@ -4,11 +4,12 @@
 
 function daysUntilChristmas(){
 	const currentDate = new Date();
+
 	//console.log(currentDate);
 	const christmasTimeStamp = Date.parse("2022-12-25");
 	const christmas = new Date(christmasTimeStamp);
 	const msUntilChristmas = christmas - currentDate;
-	
+
 	const daysUntilChristmas = msUntilChristmas / 24 / 60 / 60 / 1000;
 	const roundedDaysUntilChristmas = Math.floor(daysUntilChristmas);
 
@@ -21,23 +22,29 @@ function daysUntilChristmas(){
 	const secondsUntilChristmas = (minutesUntilChristmas - roundedMinutesUntilChristmas) * 60;
 	const roundedSecondsUntilChristmas = Math.floor(secondsUntilChristmas);
 
+  if(roundedDaysUntilChristmas === -1){
+    document.getElementById("secret-christmas-wish").innerHTML = "Merry Christmas! <br/>🎉🎄🎅";
+    document.querySelectorAll(".oreo-text").forEach(function(node){
+      console.log(node);
+      node.style.visibility = "hidden";
+    })
+  } else {
+    //const hoursUntilChristmas = Math.floor(daysUntilChristmas / 24/ 60 / 60);
+    // console.log(roundedDaysUntilChristmas + " days");
+    // console.log(roundedHoursUntilChristmas + " hours");
+    // console.log(roundedMinutesUntilChristmas + " minutes");
+    // console.log(roundedSecondsUntilChristmas + " seconds left until CHRISTMAS!");
 
+    //const jorah = document.getElementById("days"); //hey html, get me the element with the id text,
+    //jorah.innerText = daysUntilChristmas  // all the information about the element p is saved to the variable paragraph (*variable could be called anything doesn't have to be paragraph)
 
+    document.getElementById("days").innerText = roundedDaysUntilChristmas + " days";
+    document.getElementById("hours").innerText = roundedHoursUntilChristmas + " hours";
+    document.getElementById("minutes").innerText = roundedMinutesUntilChristmas + " minutes";
+    document.getElementById("seconds").innerText = roundedSecondsUntilChristmas + " seconds";
+     //does the same thing as the above commented out lines
+  }
 
-	//const hoursUntilChristmas = Math.floor(daysUntilChristmas / 24/ 60 / 60);
-	// console.log(roundedDaysUntilChristmas + " days");
-	// console.log(roundedHoursUntilChristmas + " hours");
-	// console.log(roundedMinutesUntilChristmas + " minutes");
-	// console.log(roundedSecondsUntilChristmas + " seconds left until CHRISTMAS!");
-
-	//const jorah = document.getElementById("days"); //hey html, get me the element with the id text, 
-	//jorah.innerText = daysUntilChristmas  // all the information about the element p is saved to the variable paragraph (*variable could be called anything doesn't have to be paragraph)	
-
-	document.getElementById("days").innerText = roundedDaysUntilChristmas + " days";
-	document.getElementById("hours").innerText = roundedHoursUntilChristmas + " hours";
-	document.getElementById("minutes").innerText = roundedMinutesUntilChristmas + " minutes";
-	document.getElementById("seconds").innerText = roundedSecondsUntilChristmas + " seconds";
-	 //does the same thing as the above commented out lines
 
 }
 
@@ -121,21 +128,21 @@ for(let i = 0; i <snowflakes.length; i++){
 
 function gameLoop() {
 	const babyFlake = document.getElementById("babyFlake");
-	
+
 	for(let i = 0; i <snowflakes.length; i++){
 		snowflakes[i].y = snowflakes[i].y + snowflakes[i].speed;
 
 		const snowflakeDiv = document.getElementById(i);
 		snowflakeDiv.style.top = snowflakes[i].y + "px";
-	
+
 
 		if (snowflakes[i].y>window.innerHeight){
 			snowflakes[i].x = Math.random() * window.innerWidth;
 			snowflakes[i].y = 0;
 		}
 	}
-	
-	// babyFlake.style.top = y + "px";  // 10 + "px" --> "10px" 
+
+	// babyFlake.style.top = y + "px";  // 10 + "px" --> "10px"
 	// babyFlake.style.left = x + "px";
 }
 
